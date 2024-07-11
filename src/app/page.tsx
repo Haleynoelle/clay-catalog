@@ -6,7 +6,7 @@ export default function Home() {
       <div>
         <section className="text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <img src="/images/hero-image.jpg" alt="Hero Image of Stacked Clay" />
-        <h2>A designated space for you to store your ceramic projects</h2>
+        <h2>A designated space for you to store your ceramic projects testing testing</h2>
         </section>
       </div>
 
