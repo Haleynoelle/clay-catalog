@@ -29,8 +29,21 @@ export default function RootLayout({
           <a className="p-2" href="/user/profile">My Profile</a>
         </header>
         {children}
-        <footer className="relative bottom-0 left-0 flex h-100 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <p>Footer</p>
+        <footer className="relative bottom-0 left-0 flex h-100 w-full items-end bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+          <div className="grid grid-cols-3 gap-10">
+            <p>&copy; 2024 Clay Catalog</p>
+            <div className="grid grid-rows-4">
+              <p>General</p>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">Terms & Privacy</a>
+            </div>
+            <div className="grid grid-rows-3">
+              <p>Social</p>
+              <a href="#">Reddit</a>
+              <a href="#">Instagram</a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>
