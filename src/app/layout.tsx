@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <header className="fixed left-0 top-0 flex w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-5xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+      <header className="fixed left-0 top-0 flex w-full border-b p-6 pt-8 backdrop-blur-5xl lg:static lg:w-auto  lg:rounded-xl lg:border lg:p-4">
           <Link href="/">
-          <h1>Clay Catalog</h1>
+          <h1 className="p-2">Clay Catalog</h1>
           </Link>
-          <a href="/login">Login</a>
-          <a href="/user/profile">My Profile</a>
+          <a className="p-2" href="/login">Login</a>
 
+          <a className="p-2" href="/user/profile">My Profile</a>
         </header>
         {children}
         <footer className="relative bottom-0 left-0 flex h-100 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">

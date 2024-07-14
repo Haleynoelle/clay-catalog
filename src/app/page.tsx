@@ -6,8 +6,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
         <section className="text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <Image src="/images/hero-image.jpg" alt="Hero Image of Stacked Clay" />
-        <h2>A designated space for you to store your ceramic projects</h2>
+        <Image 
+          src="/images/hero-image.jpg" 
+          width={500}
+          height={500} 
+          alt="Hero Image of Stacked Clay"
+          />
+        <h2>A designated space for you to organize your ceramic projects</h2>
         </section>
       </div>
 

@@ -49,7 +49,7 @@ export default function ProfileDashboard() {
   }
  
   return (
-    <div>
+    <div className="grid gap-8">
         <div>
         <Avatar>
             <AvatarImage src="https://unsplash.com/photos/a-group-of-people-walking-down-a-street-5CrEoOvW7Kk" alt="profile photo" />
@@ -58,7 +58,7 @@ export default function ProfileDashboard() {
         </div>
         <div>
         <nav>
-            <a href="/user/profile/projects">Projects</a>
+            <a href="/user/profile/projects">My Projects</a>
         </nav>
         </div>
         <Form {...form}>
@@ -84,7 +84,7 @@ export default function ProfileDashboard() {
         </form>
         </Form>
         <div>
-            
+
         </div>
     </div>
   )
