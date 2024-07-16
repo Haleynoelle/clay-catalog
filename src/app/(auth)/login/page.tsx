@@ -13,6 +13,7 @@ import Link from "next/link"
 
 export default function LoginForm() {
   return (
+    <div className="flex min-h-screen flex-col items-center p-10">
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
@@ -38,5 +39,6 @@ export default function LoginForm() {
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 }

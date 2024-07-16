@@ -3,23 +3,21 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <section className="text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <Image 
+    <main className="flex min-h-screen flex-col items-center p-10">
+      <div className='grid gap-8 lg:grid-cols-2'>
+        <section className="text-center lg:mb-0 lg:w-full lg:max-w-5xl">
+        <Image className='rounded-md'
           src="/images/hero-image.jpg" 
-          width={500}
-          height={500} 
+          width={800}
+          height={800}
           alt="Hero Image of Stacked Clay"
           />
-        <h2>A designated space for you to organize your ceramic projects</h2>
         </section>
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+        <div className="mb-32 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-center flex flex-col items-center">
+        <h2>A designated space for you to organize your ceramic projects</h2>
         <Link
           href="/register"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors"
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -28,10 +26,11 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p className="text-center lg:text-center max-w-[40ch] text-balance text-sm opacity-50">
+            Start building your ceramics catalog with as much or as little detail as you choose.
           </p>
         </Link>
+      </div>
       </div>
     </main>
   );

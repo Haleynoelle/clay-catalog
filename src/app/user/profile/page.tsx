@@ -2,7 +2,14 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
- 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -53,12 +60,13 @@ export default function ProfileDashboard() {
         <div>
         <Avatar>
             <AvatarImage src="https://unsplash.com/photos/a-group-of-people-walking-down-a-street-5CrEoOvW7Kk" alt="profile photo" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>HN</AvatarFallback>
         </Avatar>
+        <p>Haley Noelle</p>
         </div>
         <div>
         <nav>
-            <a href="/user/profile/projects">My Projects</a>
+            <a href="/user/profile/projects">All Projects</a>
         </nav>
         </div>
         <Form {...form}>
@@ -68,10 +76,10 @@ export default function ProfileDashboard() {
             name="bio"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Bio</FormLabel>
+                <FormLabel>About</FormLabel>
                 <FormControl>
                     <Textarea
-                    placeholder="Tell us a little bit about yourself"
+                    placeholder="Bio; Websites; etc."
                     className="resize-none"
                     {...field}
                     />
@@ -83,8 +91,81 @@ export default function ProfileDashboard() {
             <Button type="submit">Submit</Button>
         </form>
         </Form>
-        <div>
-
+        <div className="grid grid-cols-4 grid-rows-3 gap-4">
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+              <CardTitle>Project Name</CardTitle>
+              <CardDescription>
+                Status
+              </CardDescription>
+              </CardHeader>
+              <CardContent>clay type, firing, glaze, measurements</CardContent>
+              <CardFooter>
+              </CardFooter>
+            </Card>
         </div>
     </div>
   )

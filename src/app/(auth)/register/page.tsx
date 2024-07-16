@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label"
 
 export default function LoginForm() {
   return (
+    <div className="flex min-h-screen flex-col items-center p-10">
     <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle className="text-xl">Sign Up</CardTitle>
@@ -60,5 +61,6 @@ export default function LoginForm() {
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 }
