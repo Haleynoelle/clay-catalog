@@ -20,13 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <header className="fixed left-0 top-0 flex w-full border-b p-6 pt-8 backdrop-blur-5xl lg:static lg:w-auto  lg:rounded-xl lg:border lg:p-4">
-          <Link href="/">
-          <h1 className="p-2">Clay Catalog</h1>
-          </Link>
-          <a className="p-2" href="/login">Login</a>
-
-          <a className="p-2" href="/user/profile">My Profile</a>
+      <header className="fixed grid grid-flow-col left-0 top-0 grid grid-rows-1 grid-cols-6 p-2 pt-8 backdrop-blur-5xl lg:static  lg:rounded-xl lg:p-2">
+          <div className="col-start-1 col-span-3">
+          <a className="p-4" href="/">Clay Catalog</a>
+          <a className="p-4" href="/register">Resources</a>
+          <a className="p-4" href="/user/profile">My Profile (temporary nav link)</a>
+          </div>
+          <div className="col-start-5 col-span-2 justify-self-end">
+          <a className="p-4" href="/login">Login</a>
+          <a className="p-4" href="/register">Create Account</a>
+          </div>
         </header>
         {children}
         <footer className="relative bottom-0 left-0 flex h-100 w-full items-end bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">

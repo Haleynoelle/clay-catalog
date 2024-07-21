@@ -1,10 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
-      <div className='grid gap-8 lg:grid-cols-2'>
+      <div className='grid gap-8 lg:grid-cols-2 p-10'>
         <section className="text-center lg:mb-0 lg:w-full lg:max-w-5xl">
         <Image className='rounded-md'
           src="/images/hero-image.jpg" 
@@ -31,6 +46,46 @@ export default function Home() {
           </p>
         </Link>
       </div>
+      </div>
+      <div className='grid grid-rows-1 lg:w-full'>
+            <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="lg:w-full"
+          >
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card>
+                      <CardHeader>
+                      <CardTitle>Project Name</CardTitle>
+                      <CardDescription>
+                        Status
+                      </CardDescription>
+                      </CardHeader>
+                      <Image className='rounded-md md:basis-1/2 lg:basis-2/3'
+                        src="/images/hero-image.jpg" 
+                        width={100}
+                        height={100}
+                        alt="Hero Image of Stacked Clay"
+                        />
+                      <CardContent>
+                        clay type, firing, glaze, measurements
+                        </CardContent>
+                      <CardFooter>
+                        <p></p>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
       </div>
     </main>
   );

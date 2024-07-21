@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from 'next/navigation';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -40,6 +41,10 @@ const FormSchema = z.object({
 })
  
 export default function ProfileDashboard() {
+  const router = useRouter();
+  const handleEditClick = () => {
+    router.push("/user/profile/projects")
+  };
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   })
@@ -66,7 +71,7 @@ export default function ProfileDashboard() {
         </div>
         <div>
         <nav>
-            <a href="/user/profile/projects">All Projects</a>
+            <a href="/user/profile/projects/edit-projects">My Materials/Settings/etc.</a>
         </nav>
         </div>
         <Form {...form}>
@@ -164,6 +169,7 @@ export default function ProfileDashboard() {
               </CardHeader>
               <CardContent>clay type, firing, glaze, measurements</CardContent>
               <CardFooter>
+                <a onClick={handleEditClick}>full project page</a>
               </CardFooter>
             </Card>
         </div>
