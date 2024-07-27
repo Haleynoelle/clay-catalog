@@ -20,34 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <header className="fixed grid grid-flow-col left-0 top-0 grid grid-rows-1 grid-cols-6 p-2 pt-8 backdrop-blur-5xl lg:static  lg:rounded-xl lg:p-2">
-          <div className="col-start-1 col-span-3">
-          <a className="p-4" href="/">Clay Catalog</a>
-          <a className="p-4" href="/register">Resources</a>
-          <a className="p-4" href="/user/profile">My Profile (temporary nav link)</a>
-          </div>
-          <div className="col-start-5 col-span-2 justify-self-end">
-          <a className="p-4" href="/login">Login</a>
-          <a className="p-4" href="/register">Create Account</a>
-          </div>
-        </header>
         {children}
-        <footer className="relative bottom-0 left-0 flex h-100 w-full items-end bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <div className="grid grid-cols-3 gap-10">
-            <p>&copy; 2024 Clay Catalog</p>
-            <div className="grid grid-rows-4">
-              <p>General</p>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-              <a href="#">Terms & Privacy</a>
-            </div>
-            <div className="grid grid-rows-3">
-              <p>Social</p>
-              <a href="#">Reddit</a>
-              <a href="#">Instagram</a>
-            </div>
-          </div>
-        </footer>
       </body>
     </html>
   );

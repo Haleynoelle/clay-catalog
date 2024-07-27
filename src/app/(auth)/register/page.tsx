@@ -14,6 +14,8 @@ import { Label } from "@/components/ui/label"
 export default function LoginForm() {
   return (
     <div className="flex min-h-screen flex-col items-center p-10">
+    <h1 className="font-bold">Clay Catalog</h1>
+
     <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle className="text-xl">Sign Up</CardTitle>
@@ -61,6 +63,12 @@ export default function LoginForm() {
         </div>
       </CardContent>
     </Card>
+    <footer className="space-x-4">
+              <a>&copy; Clay Catalog</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">Terms & Privacy</a>
+    </footer>
     </div>
   )
 }
