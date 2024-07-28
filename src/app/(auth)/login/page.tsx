@@ -14,7 +14,7 @@ import Link from "next/link"
 export default function LoginForm() {
   return (
     <div className="flex min-h-screen flex-col items-center p-10">
-    <a href="/" className="font-bold text-lg">Clay Catalog</a>
+    <a href="/" className="font-bold text-xl pb-10">Clay Catalog</a>
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>

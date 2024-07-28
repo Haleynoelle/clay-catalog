@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label"
 export default function LoginForm() {
   return (
     <div className="flex min-h-screen flex-col items-center p-10">
-    <a href="/" className="font-bold text-lg">Clay Catalog</a>
+    <a href="/" className="font-bold text-xl pb-10">Clay Catalog</a>
 
     <Card className="mx-auto max-w-sm">
       <CardHeader>

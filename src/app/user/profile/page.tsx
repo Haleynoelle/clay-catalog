@@ -61,19 +61,13 @@ export default function ProfileDashboard() {
   }
  
   return (
-    <div className="grid gap-8">
-        <div>
+    <div className="grid grid-cols-2 gap-4 h-screen overflow-hidden">
+        <div className='h-full'>
         <Avatar>
-            <AvatarImage src="https://unsplash.com/photos/a-group-of-people-walking-down-a-street-5CrEoOvW7Kk" alt="profile photo" />
+            <AvatarImage src="" alt="profile photo" />
             <AvatarFallback>HN</AvatarFallback>
         </Avatar>
-        <p>Haley Noelle</p>
-        </div>
-        <div>
-        <nav>
-            <a href="/user/profile/projects/edit-projects">My Materials/Settings/etc.</a>
-        </nav>
-        </div>
+        <p>Haley Noelle</p>        
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
             <FormField
@@ -96,7 +90,11 @@ export default function ProfileDashboard() {
             <Button type="submit">Submit</Button>
         </form>
         </Form>
-        <div className="grid grid-cols-4 grid-rows-3 gap-4">
+        <a href="/user/profile/projects/edit-projects">Materials/Settings/etc.</a>
+
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 overflow-y-auto h-full">
             <Card>
               <CardHeader>
               <CardTitle>Project Name</CardTitle>
