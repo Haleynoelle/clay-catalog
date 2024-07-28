@@ -21,7 +21,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center lg:w-full">
       <header className="relative z-10 grid grid-flow-col left-0 top-0 grid-rows-1 grid-cols-6 p-4 pt-8 lg:p-4 bg-transparent w-full">
           <div className="col-start-1 col-span-3">
-          <a className="p-4 font-bold" href="/">Clay Catalog</a>
+          <a className="p-4 font-bold text-xl" href="/">Clay Catalog</a>
           <a className="p-4" href="#">Resources</a>
           <a className="p-4" href="/user/profile">My Profile (temporary nav link)</a>
           </div>
