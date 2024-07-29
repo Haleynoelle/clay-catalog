@@ -62,39 +62,43 @@ export default function ProfileDashboard() {
  
   return (
     <div className="grid grid-cols-2 gap-4 h-screen overflow-hidden">
-        <div className='h-full'>
-        <Avatar>
-            <AvatarImage src="" alt="profile photo" />
-            <AvatarFallback>HN</AvatarFallback>
-        </Avatar>
-        <p>Haley Noelle</p>        
-        <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
-            <FormField
-            control={form.control}
-            name="bio"
-            render={({ field }) => (
-                <FormItem>
-                <FormLabel>About</FormLabel>
-                <FormControl>
-                    <Textarea
-                    placeholder="Bio; Websites; etc."
-                    className="resize-none"
-                    {...field}
-                    />
-                </FormControl>
-                <FormMessage />
-                </FormItem>
-            )}
-            />
-            <Button type="submit">Submit</Button>
-        </form>
-        </Form>
-        <a href="/user/profile/projects/edit-projects">Materials/Settings/etc.</a>
+        <div className='overflow-y-auto h-full w-2/3 p-8 space-y-2 border-x-2	'>
+          <Avatar>
+              <AvatarImage src="" alt="profile photo" />
+              <AvatarFallback>HN</AvatarFallback>
+          </Avatar>
+          <p>Haley Noelle</p>        
+          <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+              control={form.control}
+              name="bio"
+              render={({ field }) => (
+                  <FormItem>
+                  <FormLabel>About</FormLabel>
+                  <FormControl>
+                      <Textarea
+                      placeholder="Bio; Websites; etc."
+                      className="resize-none"
+                      {...field}
+                      />
+                  </FormControl>
+                  <FormMessage />
+                  </FormItem>
+              )}
+              />
+              <Button type="submit">Submit</Button>
+          </form>
+          </Form>
+          <a href="/user/profile/projects/edit-projects">Materials</a>
+          <div></div>
+          <a href="/user/profile/projects/edit-projects">Settings</a>
+
 
         </div>
 
-        <div className="grid grid-cols-2 gap-4 overflow-y-auto h-full">
+        <div className="grid overflow-y-auto h-full p-8 space-y-2">
+            <input className="rounded-lg border bg-card text-card-foreground shadow-sm p-1"type="search" id="site-search" name="search" placeholder="quick search"/>
             <Card>
               <CardHeader>
               <CardTitle>Project Name</CardTitle>
